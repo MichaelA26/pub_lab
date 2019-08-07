@@ -1,6 +1,8 @@
 require('minitest/autorun')
 require('minitest/rg')
 require_relative('../pub')
+require_relative('../drinks_menu')
+require_relative('../punter')
 
 class PubTest < Minitest::Test
 
@@ -20,7 +22,7 @@ class PubTest < Minitest::Test
       assert_equal(0, @pub.drinks_menu.length)
     end
 
-
+    
 
 
 
