@@ -1,13 +1,15 @@
 require('minitest/autorun')
 require('minitest/rg')
 require_relative('../pub')
-require_relative('../drinks_menu')
+require_relative('../drink')
 require_relative('../punter')
 
 class PubTest < Minitest::Test
 
   def setup
-    @pub = Pub.new("Dragons Den", 1000.00, [])
+    @drink1 = Drink.new("Venom", 7)
+    @drink2 = Drink.new("Bloody Mary", 9)
+    @pub = Pub.new("Dragons Den", 1000, [@drink1, @drink2])
   end
 
     def test_pub_name
@@ -15,13 +17,12 @@ class PubTest < Minitest::Test
     end
 
     def test_till_balance
-      assert_equal(1000.00, @pub.till_balance)
+      assert_equal(1000, @pub.till_balance)
     end
 
-    def test_drinks_menu
-      assert_equal(0, @pub.drinks_menu.length)
+    def test_pub_sells_drink
+      @pub.pub_sells_drink(@drink1)
+      assert_equal(1007, @pub.till_balance)
     end
-
-
 
 end

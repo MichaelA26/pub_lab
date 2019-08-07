@@ -11,5 +11,9 @@ class Punter
     return @wallet_balance
   end
 
+  def punter_buys_drink(drink)
+    # check customer wallet balance is greater than price of drink
+    @wallet_balance -= drink.price
+  end
 
 end

@@ -8,10 +8,9 @@ class Pub
     @drinks_menu = drinks_menu
   end
 
-  def sells_customer_drink
-
+  def pub_sells_drink(drink)
+    # check customer wallet balance is greater than price of drink
+    @till_balance += drink.price
   end
-
-
 
 end
