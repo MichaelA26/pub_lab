@@ -1,31 +1,15 @@
 class Punter
 
-  attr_reader(:people)
+  attr_reader(:name, :wallet_balance)
 
-  def initialize()
-    @people = [
-        {
-          name: "Jesus Christ",
-          wallet_balance: 100.00
-        },
-        {
-          name: "Moses",
-          wallet_balance: 50.00
-        }
-      ]
+  def initialize(input_name, input_wallet_balance)
+    @name = input_name
+    @wallet_balance = input_wallet_balance
   end
 
-
-  def number_of_punters
-    return @people.count
+  def wallet_balance
+    return @wallet_balance
   end
 
-  def wallet_balance()
-    match = nil
-    for balance in @people[:wallet_balance]
-      match = balance if(balance[:wallet_balance] == "Jesus Christ")
-    end
-    return match
-  end
 
 end

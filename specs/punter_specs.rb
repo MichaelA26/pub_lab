@@ -4,14 +4,10 @@ require_relative('../punter')
 
 class PunterTest < Minitest::Test
 
-  def test_number_of_punters
-    people = Punter.new
-    assert_equal(2, people.number_of_punters)
-  end
 
-  def test_jesus_wallet_balance
-    money = Punter.new
-    assert_equal(100.00, money.wallet_balance)
+  def test_wallet_balance
+    person = Punter.new("Jesus Christ", 100.00)
+    assert_equal(100.00, person.wallet_balance)
   end
 
 end

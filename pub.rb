@@ -8,7 +8,9 @@ class Pub
     @drinks_menu = drinks_menu
   end
 
+  def sells_customer_drink
 
+  end
 
 
 

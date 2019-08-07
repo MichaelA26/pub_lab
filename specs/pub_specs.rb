@@ -22,13 +22,6 @@ class PubTest < Minitest::Test
       assert_equal(0, @pub.drinks_menu.length)
     end
 
-    
-
-
-
-
-
-
 
 
 end

@@ -20,5 +20,6 @@ class DrinksMenu
     return @drinks.count
   end
 
+  
 
 end
